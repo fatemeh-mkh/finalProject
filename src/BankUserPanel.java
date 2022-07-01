@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class BankUserPanel {
-    public void BankUserPanel() throws InvalidInputException, IOException {
+    public void BankUserPanel() throws InvalidInputException, IOException, BankPanel.InvalidInputException {
         Scanner input = new Scanner(System.in);
         System.out.println("--Welcome to Bank System--");
         while (true) {
@@ -59,5 +59,8 @@ public class BankUserPanel {
                     break;
             }
         }
+    }
+
+    private class InvalidInputException extends Exception {
     }
 }

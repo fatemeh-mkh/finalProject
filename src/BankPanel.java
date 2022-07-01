@@ -87,10 +87,7 @@ public class BankPanel {
                         break;
                     } else if (input6 == 2) {
                         System.out.println("Please choose type of your Seporde.");
-                        enum AccountType {SHORT_TERM, LONG_TERM, SPECIAL}
-                        for (AccountType obj : AccountType.values()) {
-                            System.out.println(obj);
-                        }
+                        System.out.println("1:SHORT_TERM\n2:LONG_TERM3:SPECIAL");
                         int input7 = input.nextInt();
                         switch (input7) {
                             case 1:
@@ -275,5 +272,8 @@ public class BankPanel {
         long shebaNumber=input.nextLong();
         ModiriatBank.getBankCheque( chequeAmount, accountNumberExporter, accountNumberRecipient,shebaNumber);
         System.out.println(ModiriatBank.chequeList.toString());
+    }
+
+    class InvalidInputException extends Exception {
     }
 }
